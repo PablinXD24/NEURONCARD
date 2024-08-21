@@ -5,8 +5,8 @@
 }
 
 :root {
-  --card-height: 65vh;
-  --card-width: calc(var(--card-height) / 1.5);
+  --card-height: 90vh; /* Ajuste o tamanho do cartão conforme necessário */
+  --card-width: 120vw;  /* Ajuste o tamanho do cartão conforme necessário */
 }
 
 body {
@@ -14,9 +14,8 @@ body {
   background: #212534;
   display: flex;
   align-items: center;
-  flex-direction: column;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  justify-content: center; /* Centraliza o cartão horizontal e verticalmente */
+  margin: 0; /* Remove a margem padrão do body */
   box-sizing: border-box;
 }
 
@@ -35,7 +34,7 @@ body {
   color: rgb(88, 199, 250, 0%);
   cursor: pointer;
   font-family: cursive;
-  overflow: visible; /* Ensure logo does not get clipped */
+  overflow: visible; /* Garante que a logo não seja cortada */
 }
 
 .card:hover {
@@ -59,10 +58,10 @@ body {
     #50BF58, 
     #F2CA52);
   position: absolute;
-  z-index: -2; /* Make sure this is behind the logo */
+  z-index: -2;
   top: -1%;
   left: -2%;
-  animation: spin 10s linear infinite;
+  animation: spin 2.5s linear infinite;
 }
 
 .card::after {
@@ -71,7 +70,7 @@ body {
   top: calc(var(--card-height) / 6);
   left: 0;
   right: 0;
-  z-index: -1; /* Make sure this is behind the logo */
+  z-index: -1;
   height: 100%;
   width: 100%;
   margin: 0 auto;
@@ -85,7 +84,7 @@ body {
     #F2CA52);
   opacity: 1;
   transition: opacity 0.5s;
-  animation: spin 10s linear infinite;
+  animation: spin 2.5s linear infinite;
 }
 
 .logo {
@@ -97,7 +96,7 @@ body {
   transform: translate(-50%, -50%);
   opacity: 0;
   transition: opacity 0.5s;
-  z-index: 1; /* Ensure logo is above the gradient */
+  z-index: 1;
 }
 
 .card:hover .logo {
